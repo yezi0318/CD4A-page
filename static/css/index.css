@@ -6,9 +6,15 @@ body {
   font-family: Arial, sans-serif;
 }
 
+/* ===== CONTAINER（关键！解决你比例问题）===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
 /* ===== HERO ===== */
 .hero {
-  text-align: center;
   padding: 80px 20px;
 }
 
@@ -39,7 +45,6 @@ body {
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
-  transition: 0.2s;
 }
 
 .custom-btn:hover {
@@ -77,24 +82,29 @@ body {
 
 /* ===== SECTION ===== */
 .section {
-  padding: 60px 20px;
-  text-align: center;
+  padding: 80px 20px;
 }
 
 .section h2 {
-  color: white;
+  text-align: center;
   margin-bottom: 20px;
 }
 
-/* ===== VIDEO ===== */
+/* ===== VIDEO（修复你现在的问题）===== */
 .video {
-  width: 70%;
+  width: 100%;
   border-radius: 10px;
 }
 
-/* ===== DATASET PREVIEW ===== */
-.dataset-preview img {
-  width: 70%;
+/* ===== GRID（CHI风格）===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid img {
+  width: 100%;
   border-radius: 12px;
 }
 
@@ -102,8 +112,6 @@ body {
 .bibtex {
   background: #111;
   padding: 20px;
-  width: 70%;
-  margin: auto;
   border-radius: 10px;
   text-align: left;
 }
