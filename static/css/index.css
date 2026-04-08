@@ -749,5 +749,55 @@ a:focus {
   }
 }
 
+/* ===== FIX DATASET DROPDOWN FINAL ===== */
 
+/* 防止被下面挡住 */
+.hero,
+.section {
+  overflow: visible !important;
+}
+
+/* 提升按钮层级 */
+.publication-links {
+  position: relative;
+  z-index: 10;
+}
+
+/* dropdown 本体 */
+.custom-dropdown {
+  position: relative;
+  z-index: 9999;
+}
+
+/* dropdown 列表 */
+.dropdown-list {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
+  min-width: 160px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  z-index: 9999;
+}
+
+/* hover 显示 */
+.custom-dropdown:hover .dropdown-list {
+  display: block;
+}
+
+/* item */
+.dropdown-list a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-list a:hover {
+  background-color: #ff8a00;
+  color: black;
+}
 
