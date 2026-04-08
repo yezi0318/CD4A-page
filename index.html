@@ -1,40 +1,72 @@
-<div class="publication-links buttons-row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CODE -->
-  <a href="https://github.com/YOUR-ANCAT-REPO" target="_blank"
-     class="button is-dark is-rounded">
-    <span class="icon"><i class="fab fa-github"></i></span>
-    <span>ANCAT Code</span>
-  </a>
+  <title>Lost in Translation</title>
 
-  <!-- ARXIV -->
-  <a href="#" target="_blank"
-     class="button is-dark is-rounded">
-    <span class="icon"><i class="fas fa-file-alt"></i></span>
-    <span>arXiv</span>
-  </a>
+  <!-- Bulma -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
 
-  <!-- SLIDES -->
-  <a href="#" target="_blank"
-     class="button is-dark is-rounded">
-    <span class="icon"><i class="fas fa-file-powerpoint"></i></span>
-    <span>Slides</span>
-  </a>
+  <!-- Custom -->
+  <link rel="stylesheet" href="static/css/index.css">
+</head>
 
-  <!-- DATASET -->
-  <div class="dataset-wrapper">
+<body>
 
-    <button class="button is-dark is-rounded">
-      <span class="icon"><i class="fas fa-database"></i></span>
-      <span>Dataset</span>
-    </button>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container has-text-centered">
 
-    <div class="dataset-dropdown">
-      <a href="static/files/dataset_A.zip" download>Dataset A</a>
-      <a href="static/files/dataset_B.zip" download>Dataset B</a>
-      <a href="static/files/dataset_C.zip" download>Dataset C</a>
+      <!-- TITLE -->
+      <h1 class="title publication-title">
+        Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
+      </h1>
+
+      <!-- AUTHORS -->
+      <div class="authors">
+        Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="buttons-row">
+
+        <a class="custom-btn" href="#" target="_blank">
+          <i class="fab fa-github"></i> ANCAT Code
+        </a>
+
+        <a class="custom-btn" href="#" target="_blank">
+          <i class="fas fa-file-alt"></i> arXiv
+        </a>
+
+        <a class="custom-btn" href="#" target="_blank">
+          <i class="fas fa-file-powerpoint"></i> Slides
+        </a>
+
+        <!-- DATASET DROPDOWN -->
+        <div class="dropdown is-hoverable">
+          <div class="dropdown-trigger">
+            <button class="custom-btn">
+              <i class="fas fa-database"></i> Dataset
+            </button>
+          </div>
+
+          <div class="dropdown-menu">
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-item">Dataset A</a>
+              <a href="#" class="dropdown-item">Dataset B</a>
+              <a href="#" class="dropdown-item">Dataset C</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
-
   </div>
+</section>
 
-</div>
+</body>
+</html>
