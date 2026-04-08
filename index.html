@@ -6,12 +6,11 @@
 
   <title>Lost in Translation</title>
 
-  <!-- Bulma -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <!-- 正确路径（关键！） -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
 
-  <!-- Custom -->
-  <link rel="stylesheet" href="static/css/index.css">
 </head>
 
 <body>
@@ -33,27 +32,27 @@
       <!-- BUTTONS -->
       <div class="buttons-row">
 
-        <a class="custom-btn" href="#" target="_blank">
+        <a class="custom-btn" href="#">
           <i class="fab fa-github"></i> ANCAT Code
         </a>
 
-        <a class="custom-btn" href="#" target="_blank">
+        <a class="custom-btn" href="#">
           <i class="fas fa-file-alt"></i> arXiv
         </a>
 
-        <a class="custom-btn" href="#" target="_blank">
+        <a class="custom-btn" href="#">
           <i class="fas fa-file-powerpoint"></i> Slides
         </a>
 
         <!-- DATASET DROPDOWN -->
-        <div class="dropdown is-hoverable">
+        <div class="dropdown custom-dropdown">
           <div class="dropdown-trigger">
-            <button class="custom-btn">
+            <button class="custom-btn" id="datasetBtn">
               <i class="fas fa-database"></i> Dataset
             </button>
           </div>
 
-          <div class="dropdown-menu">
+          <div class="dropdown-menu" id="dropdownMenu">
             <div class="dropdown-content">
               <a href="#" class="dropdown-item">Dataset A</a>
               <a href="#" class="dropdown-item">Dataset B</a>
@@ -67,6 +66,13 @@
     </div>
   </div>
 </section>
+
+<!-- JS 控制 dropdown -->
+<script>
+document.getElementById("datasetBtn").onclick = function () {
+  document.getElementById("dropdownMenu").classList.toggle("is-active");
+};
+</script>
 
 </body>
 </html>
