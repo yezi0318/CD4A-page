@@ -1,77 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Lost in Translation</title>
 
-  <!-- Bulma -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-
-  <!-- YOUR CSS -->
+  <!-- CSS -->
   <link rel="stylesheet" href="static/css/index.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="hero-body">
-    <div class="container has-text-centered">
+  <h1 class="title">
+    Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
+  </h1>
 
-      <h1 class="title publication-title">
-        Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
-      </h1>
+  <p class="authors">
+    Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
+  </p>
 
-      <p class="authors">
-        Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
-      </p>
+  <!-- BUTTON ROW -->
+  <div class="buttons-row">
 
-      <!-- BUTTONS -->
-      <div class="buttons-row">
+    <a class="custom-btn">ANCAT Code</a>
+    <a class="custom-btn">arXiv</a>
+    <a class="custom-btn">Slides</a>
 
-        <a class="custom-btn" href="#">ANCAT Code</a>
-        <a class="custom-btn" href="#">arXiv</a>
-        <a class="custom-btn" href="#">Slides</a>
+    <!-- DATASET DROPDOWN -->
+    <div class="dataset-wrapper">
+      <a class="custom-btn dataset-btn" onclick="toggleDropdown()">Dataset</a>
 
-        <!-- DATASET DROPDOWN -->
-        <div class="dataset-wrapper">
-          <button class="custom-btn dataset-btn">Dataset</button>
-
-          <div class="dataset-dropdown">
-            <a href="#">Dataset A</a>
-            <a href="#">Dataset B</a>
-            <a href="#">Dataset C</a>
-          </div>
-        </div>
-
+      <div id="datasetMenu" class="dataset-dropdown">
+        <a href="#">Dataset A</a>
+        <a href="#">Dataset B</a>
+        <a href="#">Dataset C</a>
       </div>
-
     </div>
+
   </div>
 </section>
 
-<!-- VIDEO -->
+<!-- ===== VIDEO ===== -->
 <section class="section">
-  <div class="container">
-    <h2 class="section-title">Video Presentation</h2>
+  <h2>Video Presentation</h2>
 
-    <video width="100%" controls>
-      <source src="static/videos/demo.mp4" type="video/mp4">
-    </video>
-
-  </div>
+  <video controls class="video">
+    <source src="static/videos/demo.mp4" type="video/mp4">
+  </video>
 </section>
 
-<!-- DATASET SECTION -->
+<!-- ===== DATASET PREVIEW ===== -->
 <section class="section">
-  <div class="container">
-    <h2 class="section-title">Dataset</h2>
-    <p>More dataset details here...</p>
+  <h2>Dataset Preview</h2>
+
+  <div class="dataset-preview">
+    <img src="static/images/sample.jpg">
   </div>
 </section>
+
+<!-- ===== BIBTEX ===== -->
+<section class="section">
+  <h2>BibTeX</h2>
+
+  <div class="bibtex">
+<pre>
+@inproceedings{feng2026,
+  title={Lost in Translation},
+  author={Feng, Huining},
+  booktitle={CHI 2026}
+}
+</pre>
+  </div>
+</section>
+
+<!-- ===== SCRIPT ===== -->
+<script>
+function toggleDropdown() {
+  const menu = document.getElementById("datasetMenu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
+
+window.onclick = function(e) {
+  if (!e.target.matches('.dataset-btn')) {
+    document.getElementById("datasetMenu").style.display = "none";
+  }
+}
+</script>
 
 </body>
 </html>
