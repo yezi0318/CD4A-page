@@ -1,117 +1,101 @@
-/* ===== 全局 ===== */
+/* ===== GLOBAL ===== */
 body {
   background-color: #000 !important;
   color: white !important;
-  font-family: Arial, sans-serif;
   overflow-y: auto !important;
 }
 
-/* ===== HERO 修复（关键）===== */
+/* ===== HERO FIX ===== */
 .hero {
-  background-color: #000 !important;
-  min-height: auto !important;   /* 🔥 解决页面卡住 */
-  padding-bottom: 60px;
+  height: auto !important;
+  min-height: auto !important;
+  padding: 80px 20px;
 }
 
-/* ===== 标题 ===== */
+/* ===== TITLE ===== */
 .publication-title {
-  color: #ff8c00 !important;
-  font-size: 2.6rem;
+  color: #ff8a00 !important;
+  font-size: 2.8rem;
   font-weight: 800;
 }
 
-/* ===== 作者 ===== */
+/* ===== AUTHORS ===== */
 .authors {
   color: #ccc;
-  margin-top: 10px;
   margin-bottom: 30px;
 }
 
-/* ===== 按钮一行 ===== */
+/* ===== BUTTON ROW ===== */
 .buttons-row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 15px;
+  gap: 20px;
   flex-wrap: nowrap;
 }
 
-/* ===== 按钮 ===== */
+/* ===== BUTTON STYLE ===== */
 .custom-btn {
-  background: #1f2a44 !important;
-  color: white !important;
-  padding: 12px 22px;
+  background: #2f3b52;
+  color: white;
+  padding: 12px 26px;
   border-radius: 12px;
+  text-decoration: none;
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-  cursor: pointer;
-  text-decoration: none !important;
   transition: 0.2s;
 }
 
 .custom-btn:hover {
-  background: #ff8c00 !important;
-  color: black !important;
+  background: #ff8a00;
+  color: black;
 }
 
 /* ===== DATASET WRAPPER ===== */
 .dataset-wrapper {
   position: relative;
-  display: inline-block;
 }
 
 /* ===== DROPDOWN ===== */
 .dataset-dropdown {
   display: none;
   position: absolute;
-  top: 110%;
+  top: 120%;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1a1a1a;
+  background: #1a1a1a;
   border-radius: 10px;
-  border: 1px solid #333;
+  padding: 10px 0;
   min-width: 160px;
-  z-index: 10;   /* 🔥 修复遮挡 */
+  z-index: 9999;
 }
 
-/* hover 显示 */
-.dataset-wrapper:hover .dataset-dropdown {
-  display: block;
-}
-
-/* item */
+/* ===== DROPDOWN ITEMS ===== */
 .dataset-dropdown a {
   display: block;
-  padding: 10px;
-  color: white !important;
+  padding: 10px 20px;
+  color: white;
   text-decoration: none;
 }
 
 .dataset-dropdown a:hover {
-  background-color: #ff8c00;
-  color: black !important;
+  background: #ff8a00;
+  color: black;
 }
 
-/* ===== 去掉蓝色链接 ===== */
-a {
-  color: inherit !important;
-  text-decoration: none !important;
+/* ===== SHOW ON HOVER ===== */
+.dataset-wrapper:hover .dataset-dropdown {
+  display: block;
 }
 
-.hero {
-  height: auto !important;
-  min-height: auto !important;
-  overflow: visible !important;
+/* ===== SECTION ===== */
+.section {
+  background: #111;
+  padding: 60px 20px;
 }
 
-html, body {
-  height: auto !important;
-  overflow-y: auto !important;
-}
-
-section {
-  overflow: visible !important;
+/* ===== SECTION TITLE ===== */
+.section-title {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
