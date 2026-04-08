@@ -1,46 +1,74 @@
-/* ===== BUTTON ROW FIX ===== */
+/* ===== GLOBAL ===== */
+body {
+  background-color: #000;
+  color: white;
+  font-family: "Helvetica Neue", Arial;
+}
 
+/* ===== TITLE ===== */
+.publication-title {
+  color: #ff8c00; /* 橙色 */
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+/* ===== AUTHORS ===== */
+.authors {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  color: #ccc;
+}
+
+/* ===== BUTTON ROW ===== */
 .buttons-row {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  flex-wrap: nowrap; /* 强制一行 */
+  flex-wrap: wrap;
 }
 
-/* dataset 外层 */
-.dataset-wrapper {
-  position: relative;
-  display: inline-block;
+/* ===== BUTTON STYLE ===== */
+.custom-btn {
+  background: #1f2a44;
+  color: white !important;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none !important;
+  transition: 0.2s;
+  border: none;
 }
 
-/* dropdown */
-.dataset-dropdown {
-  display: none;
-  position: absolute;
-  top: 110%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #1a1a1a;
+.custom-btn:hover {
+  background: #ff8c00;
+  color: black !important;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu {
+  background: #111;
   border-radius: 10px;
-  border: 1px solid #333;
-  min-width: 160px;
-  z-index: 9999;
+  margin-top: 10px;
+  min-width: 180px;
 }
 
-/* hover 出现 */
-.dataset-wrapper:hover .dataset-dropdown {
-  display: block;
+/* ===== DROPDOWN ITEM ===== */
+.dropdown-item {
+  color: white !important;
+  padding: 10px 15px;
 }
 
-/* item */
-.dataset-dropdown a {
-  display: block;
-  padding: 10px;
-  color: white;
+.dropdown-item:hover {
+  background: #ff8c00;
+  color: black !important;
+}
+
+/* ===== FIX LINK BLUE ===== */
+a {
+  color: inherit;
   text-decoration: none;
-}
-
-.dataset-dropdown a:hover {
-  background-color: #ff8a00;
-  color: black;
 }
