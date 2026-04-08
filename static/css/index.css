@@ -19,7 +19,7 @@ body {
   margin-bottom: 30px;
 }
 
-/* ===== 按钮整体一行 ===== */
+/* ===== 按钮一行 ===== */
 .buttons-row {
   display: flex;
   justify-content: center;
@@ -37,12 +37,11 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  text-decoration: none !important;
   border: none;
   cursor: pointer;
+  text-decoration: none !important;
 }
 
-/* hover */
 .custom-btn:hover {
   background: #ff8c00 !important;
   color: black !important;
@@ -53,7 +52,6 @@ body {
   position: relative;
 }
 
-/* dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -66,7 +64,7 @@ body {
 }
 
 /* 显示 */
-.dropdown-menu.is-active {
+.dropdown-menu.show {
   display: block;
 }
 
