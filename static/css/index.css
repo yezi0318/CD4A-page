@@ -3,6 +3,14 @@ body {
   background-color: #000 !important;
   color: white !important;
   font-family: Arial, sans-serif;
+  overflow-y: auto !important;
+}
+
+/* ===== HERO 修复（关键）===== */
+.hero {
+  background-color: #000 !important;
+  min-height: auto !important;   /* 🔥 解决页面卡住 */
+  padding-bottom: 60px;
 }
 
 /* ===== 标题 ===== */
@@ -25,6 +33,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  flex-wrap: nowrap;
 }
 
 /* ===== 按钮 ===== */
@@ -40,6 +49,7 @@ body {
   border: none;
   cursor: pointer;
   text-decoration: none !important;
+  transition: 0.2s;
 }
 
 .custom-btn:hover {
@@ -47,36 +57,41 @@ body {
   color: black !important;
 }
 
-/* ===== dropdown ===== */
-.custom-dropdown {
+/* ===== DATASET WRAPPER ===== */
+.dataset-wrapper {
   position: relative;
+  display: inline-block;
 }
 
-.dropdown-menu {
+/* ===== DROPDOWN ===== */
+.dataset-dropdown {
   display: none;
   position: absolute;
-  top: 55px;
-  left: 0;
-  background: #111;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1a1a1a;
   border-radius: 10px;
+  border: 1px solid #333;
   min-width: 160px;
-  z-index: 999;
+  z-index: 10;   /* 🔥 修复遮挡 */
 }
 
-/* 显示 */
-.dropdown-menu.show {
+/* hover 显示 */
+.dataset-wrapper:hover .dataset-dropdown {
   display: block;
 }
 
-/* dropdown item */
-.dropdown-item {
+/* item */
+.dataset-dropdown a {
   display: block;
-  padding: 10px 15px;
+  padding: 10px;
   color: white !important;
+  text-decoration: none;
 }
 
-.dropdown-item:hover {
-  background: #ff8c00;
+.dataset-dropdown a:hover {
+  background-color: #ff8c00;
   color: black !important;
 }
 
