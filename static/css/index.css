@@ -1,36 +1,35 @@
-/* ===== GLOBAL ===== */
+/* ===== 全局 ===== */
 body {
-  background-color: #000;
-  color: white;
-  font-family: "Helvetica Neue", Arial;
+  background-color: #000 !important;
+  color: white !important;
+  font-family: Arial, sans-serif;
 }
 
-/* ===== TITLE ===== */
+/* ===== 标题 ===== */
 .publication-title {
-  color: #ff8c00; /* 橙色 */
+  color: #ff8c00 !important;
+  font-size: 2.6rem;
   font-weight: 800;
-  font-size: 2.5rem;
 }
 
-/* ===== AUTHORS ===== */
+/* ===== 作者 ===== */
 .authors {
+  color: #ccc;
   margin-top: 10px;
   margin-bottom: 30px;
-  color: #ccc;
 }
 
-/* ===== BUTTON ROW ===== */
+/* ===== 按钮整体一行 ===== */
 .buttons-row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
+  gap: 15px;
 }
 
-/* ===== BUTTON STYLE ===== */
+/* ===== 按钮 ===== */
 .custom-btn {
-  background: #1f2a44;
+  background: #1f2a44 !important;
   color: white !important;
   padding: 12px 22px;
   border-radius: 12px;
@@ -39,27 +38,43 @@ body {
   align-items: center;
   gap: 8px;
   text-decoration: none !important;
-  transition: 0.2s;
   border: none;
+  cursor: pointer;
 }
 
+/* hover */
 .custom-btn:hover {
-  background: #ff8c00;
+  background: #ff8c00 !important;
   color: black !important;
 }
 
-/* ===== DROPDOWN ===== */
-.dropdown-menu {
-  background: #111;
-  border-radius: 10px;
-  margin-top: 10px;
-  min-width: 180px;
+/* ===== dropdown ===== */
+.custom-dropdown {
+  position: relative;
 }
 
-/* ===== DROPDOWN ITEM ===== */
+/* dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 55px;
+  left: 0;
+  background: #111;
+  border-radius: 10px;
+  min-width: 160px;
+  z-index: 999;
+}
+
+/* 显示 */
+.dropdown-menu.is-active {
+  display: block;
+}
+
+/* dropdown item */
 .dropdown-item {
-  color: white !important;
+  display: block;
   padding: 10px 15px;
+  color: white !important;
 }
 
 .dropdown-item:hover {
@@ -67,8 +82,8 @@ body {
   color: black !important;
 }
 
-/* ===== FIX LINK BLUE ===== */
+/* ===== 去掉蓝色链接 ===== */
 a {
-  color: inherit;
-  text-decoration: none;
+  color: inherit !important;
+  text-decoration: none !important;
 }
