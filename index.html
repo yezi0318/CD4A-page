@@ -2,57 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Lost in Translation</title>
 
-  <!-- 🔥 关键：必须带 /CD4A-page/ -->
-  <link rel="stylesheet" href="/CD4A-page/static/css/bulma.min.css">
-  <link rel="stylesheet" href="/CD4A-page/static/css/fontawesome.all.min.css">
-  <link rel="stylesheet" href="/CD4A-page/static/css/index.css">
+  <!-- Bulma -->
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+
+  <!-- YOUR CSS -->
+  <link rel="stylesheet" href="static/css/index.css">
 </head>
 
 <body>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-body">
     <div class="container has-text-centered">
 
-      <!-- TITLE -->
       <h1 class="title publication-title">
         Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
       </h1>
 
-      <!-- AUTHORS -->
-      <div class="authors">
+      <p class="authors">
         Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
-      </div>
+      </p>
 
       <!-- BUTTONS -->
       <div class="buttons-row">
 
-        <a class="custom-btn" href="#">
-          <i class="fab fa-github"></i> ANCAT Code
-        </a>
-
-        <a class="custom-btn" href="#">
-          <i class="fas fa-file-alt"></i> arXiv
-        </a>
-
-        <a class="custom-btn" href="#">
-          <i class="fas fa-file-powerpoint"></i> Slides
-        </a>
+        <a class="custom-btn" href="#">ANCAT Code</a>
+        <a class="custom-btn" href="#">arXiv</a>
+        <a class="custom-btn" href="#">Slides</a>
 
         <!-- DATASET DROPDOWN -->
-        <div class="dropdown custom-dropdown">
-          <button class="custom-btn" id="datasetBtn">
-            <i class="fas fa-database"></i> Dataset
-          </button>
+        <div class="dataset-wrapper">
+          <button class="custom-btn dataset-btn">Dataset</button>
 
-          <div class="dropdown-menu" id="dropdownMenu">
-            <a href="#" class="dropdown-item">Dataset A</a>
-            <a href="#" class="dropdown-item">Dataset B</a>
-            <a href="#" class="dropdown-item">Dataset C</a>
+          <div class="dataset-dropdown">
+            <a href="#">Dataset A</a>
+            <a href="#">Dataset B</a>
+            <a href="#">Dataset C</a>
           </div>
         </div>
 
@@ -62,12 +53,25 @@
   </div>
 </section>
 
-<!-- JS -->
-<script>
-document.getElementById("datasetBtn").onclick = function () {
-  document.getElementById("dropdownMenu").classList.toggle("show");
-};
-</script>
+<!-- VIDEO -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Video Presentation</h2>
+
+    <video width="100%" controls>
+      <source src="static/videos/demo.mp4" type="video/mp4">
+    </video>
+
+  </div>
+</section>
+
+<!-- DATASET SECTION -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Dataset</h2>
+    <p>More dataset details here...</p>
+  </div>
+</section>
 
 </body>
 </html>
