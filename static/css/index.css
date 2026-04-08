@@ -1,117 +1,124 @@
 /* ===== GLOBAL ===== */
 body {
   margin: 0;
+  font-family: Arial, sans-serif;
   background: black;
   color: white;
-  font-family: Arial, sans-serif;
-}
-
-/* ===== CONTAINER（关键！解决你比例问题）===== */
-.container {
-  max-width: 900px;
-  margin: auto;
-  text-align: center;
 }
 
 /* ===== HERO ===== */
 .hero {
-  padding: 80px 20px;
+  text-align: center;
+  padding: 80px 20px 60px;
 }
 
-.title {
-  color: #ff8a00;
-  font-size: 42px;
-  font-weight: bold;
+.hero h1 {
+  font-size: 48px;
+  color: #f39c34;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .authors {
   margin-top: 20px;
   color: #ccc;
+  font-size: 18px;
 }
 
 /* ===== BUTTONS ===== */
 .buttons-row {
+  margin-top: 30px;
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 40px;
 }
 
-.custom-btn {
-  background: #2b3350;
+.btn {
+  background: #2f3754;
+  padding: 12px 24px;
+  border-radius: 20px;
   color: white;
-  padding: 12px 26px;
-  border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  cursor: pointer;
+  transition: 0.3s;
 }
 
-.custom-btn:hover {
-  background: #3c4a7a;
+.btn:hover {
+  background: #3e4a70;
 }
 
-/* ===== DATASET DROPDOWN ===== */
-.dataset-wrapper {
-  position: relative;
-}
-
-.dataset-dropdown {
-  display: none;
-  position: absolute;
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #111;
-  border-radius: 10px;
-  padding: 10px 0;
-  min-width: 160px;
-  z-index: 999;
-}
-
-.dataset-dropdown a {
-  display: block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.dataset-dropdown a:hover {
-  background: #ff8a00;
+/* dataset same style */
+.dataset-btn {
+  background: #2f3754;
 }
 
 /* ===== SECTION ===== */
 .section {
-  padding: 80px 20px;
+  background: #f4f4f4;
+  color: black;
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .section h2 {
-  text-align: center;
+  font-size: 28px;
   margin-bottom: 20px;
 }
 
-/* ===== VIDEO（修复你现在的问题）===== */
-.video {
-  width: 100%;
-  border-radius: 10px;
+/* ===== VIDEO ===== */
+.video-container {
+  max-width: 900px;
+  margin: auto;
 }
 
-/* ===== GRID（CHI风格）===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.grid img {
+.video-container video {
   width: 100%;
   border-radius: 12px;
 }
 
 /* ===== BIBTEX ===== */
-.bibtex {
-  background: #111;
+.bibtex-container {
+  position: relative;
+  background: #eaeaea;
+  border-radius: 12px;
   padding: 20px;
-  border-radius: 10px;
-  text-align: left;
+  max-width: 900px;
+  margin: auto;
+  overflow-x: auto;
+}
+
+.bibtex-container pre {
+  margin: 0;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #5b6ee1;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.copy-btn:hover {
+  background: #3f51b5;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #f4f4f4;
+  color: #555;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.footer a {
+  color: #5b6ee1;
+  text-decoration: none;
 }
