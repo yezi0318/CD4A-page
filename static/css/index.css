@@ -100,3 +100,18 @@ a {
   color: inherit !important;
   text-decoration: none !important;
 }
+
+.hero {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+}
+
+html, body {
+  height: auto !important;
+  overflow-y: auto !important;
+}
+
+section {
+  overflow: visible !important;
+}
