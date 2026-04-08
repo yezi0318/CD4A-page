@@ -4,69 +4,76 @@
   <meta charset="UTF-8">
   <title>Lost in Translation</title>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="static/css/index.css">
-
-  <!-- FontAwesome -->
   <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
 </head>
 
 <body>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero">
-  <h1 class="title">
-    Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
-  </h1>
+  <div class="container">
 
-  <p class="authors">
-    Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
-  </p>
+    <h1 class="title">
+      Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
+    </h1>
 
-  <!-- BUTTON ROW -->
-  <div class="buttons-row">
+    <p class="authors">
+      Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
+    </p>
 
-    <a class="custom-btn">ANCAT Code</a>
-    <a class="custom-btn">arXiv</a>
-    <a class="custom-btn">Slides</a>
+    <div class="buttons-row">
 
-    <!-- DATASET DROPDOWN -->
-    <div class="dataset-wrapper">
-      <a class="custom-btn dataset-btn" onclick="toggleDropdown()">Dataset</a>
+      <a class="custom-btn">ANCAT Code</a>
+      <a class="custom-btn">arXiv</a>
+      <a class="custom-btn">Slides</a>
 
-      <div id="datasetMenu" class="dataset-dropdown">
-        <a href="#">Dataset A</a>
-        <a href="#">Dataset B</a>
-        <a href="#">Dataset C</a>
+      <!-- DATASET -->
+      <div class="dataset-wrapper">
+        <a class="custom-btn dataset-btn" onclick="toggleDropdown()">Dataset</a>
+
+        <div id="datasetMenu" class="dataset-dropdown">
+          <a href="#">Dataset A</a>
+          <a href="#">Dataset B</a>
+          <a href="#">Dataset C</a>
+        </div>
       </div>
+
     </div>
-
   </div>
 </section>
 
-<!-- ===== VIDEO ===== -->
+<!-- VIDEO -->
 <section class="section">
-  <h2>Video Presentation</h2>
+  <div class="container">
+    <h2>Video Presentation</h2>
 
-  <video controls class="video">
-    <source src="static/videos/demo.mp4" type="video/mp4">
-  </video>
-</section>
-
-<!-- ===== DATASET PREVIEW ===== -->
-<section class="section">
-  <h2>Dataset Preview</h2>
-
-  <div class="dataset-preview">
-    <img src="static/images/sample.jpg">
+    <video controls class="video">
+      <source src="static/videos/demo.mp4" type="video/mp4">
+    </video>
   </div>
 </section>
 
-<!-- ===== BIBTEX ===== -->
+<!-- DATASET PREVIEW -->
 <section class="section">
-  <h2>BibTeX</h2>
+  <div class="container">
+    <h2>Dataset Preview</h2>
 
-  <div class="bibtex">
+    <div class="grid">
+      <img src="static/images/sample.jpg">
+      <img src="static/images/sample.jpg">
+      <img src="static/images/sample.jpg">
+      <img src="static/images/sample.jpg">
+    </div>
+  </div>
+</section>
+
+<!-- BIBTEX -->
+<section class="section">
+  <div class="container">
+    <h2>BibTeX</h2>
+
+    <div class="bibtex">
 <pre>
 @inproceedings{feng2026,
   title={Lost in Translation},
@@ -74,10 +81,11 @@
   booktitle={CHI 2026}
 }
 </pre>
+    </div>
   </div>
 </section>
 
-<!-- ===== SCRIPT ===== -->
+<!-- SCRIPT -->
 <script>
 function toggleDropdown() {
   const menu = document.getElementById("datasetMenu");
