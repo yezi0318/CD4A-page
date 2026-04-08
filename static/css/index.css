@@ -1,24 +1,19 @@
-/* ===== RESET ===== */
-* {
-  box-sizing: border-box;
-}
-
+/* ===== 强制覆盖（关键） ===== */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: black;
-  color: white;
+  background: black !important;
+  color: white !important;
 }
 
 /* ===== HERO ===== */
 .hero {
   text-align: center;
   padding: 80px 20px;
+  background: black !important;
 }
 
 .title {
   font-size: 42px;
-  color: white; /* ✅ 修复橘色 */
+  color: white !important;
   max-width: 1000px;
   margin: auto;
   line-height: 1.3;
@@ -27,34 +22,28 @@ body {
 .authors {
   color: #ccc;
   margin-top: 20px;
-  font-size: 16px;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== BUTTON ===== */
 .buttons {
   margin-top: 30px;
 }
 
 .btn {
   display: inline-block;
-  background: #2f3754;
+  background: #2f3754 !important;
   padding: 12px 24px;
   margin: 10px;
   border-radius: 20px;
-  color: white;
+  color: white !important;
   text-decoration: none;
   font-weight: bold;
-  transition: 0.2s;
 }
 
-.btn:hover {
-  background: #3f4a6b;
-}
-
-/* ===== SECTION ===== */
+/* ===== SECTION（白底部分） ===== */
 .section {
-  background: #f4f4f4;
-  color: black;
+  background: #f4f4f4 !important;
+  color: black !important;
   padding: 60px 20px;
   text-align: center;
 }
@@ -70,31 +59,34 @@ body {
   border-radius: 10px;
 }
 
-/* ===== BIBTEX ===== */
+/* ===== BibTeX（重点修复） ===== */
 .bibtex {
   position: relative;
   max-width: 900px;
   margin: 40px auto;
-  background: #eaeaea;
+  background: #eaeaea !important;  /* ← 灰框 */
   padding: 20px;
   border-radius: 10px;
   text-align: left;
 }
 
+/* 关键：防止挤压 */
 .bibtex pre {
-  white-space: pre;
-  overflow-x: auto;
+  white-space: pre !important;
+  overflow-x: auto !important;
+  font-family: monospace !important;
   font-size: 14px;
   margin: 0;
-  font-family: monospace;
+  color: black !important;
 }
 
+/* Copy按钮 */
 .bibtex button {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: #5b6ee1;
-  color: white;
+  background: #5b6ee1 !important;
+  color: white !important;
   border: none;
   padding: 6px 12px;
   border-radius: 6px;
@@ -103,9 +95,8 @@ body {
 
 /* ===== FOOTER ===== */
 footer {
-  background: #f4f4f4;
+  background: #f4f4f4 !important;
   color: #666;
   padding: 30px;
   text-align: center;
-  font-size: 14px;
 }
