@@ -1,101 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Lost in Translation</title>
-
   <link rel="stylesheet" href="static/css/index.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
 </head>
 
 <body>
 
-<!-- HERO -->
+<!-- ===== HERO ===== -->
 <section class="hero">
-  <div class="container">
+  <h1>
+    Lost in Translation: Understanding Autistic–Neurotypical
+    Communication Style Differences in Job Postings
+  </h1>
 
-    <h1 class="title">
-      Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
-    </h1>
+  <p class="authors">
+    Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung,
+    Slobodan Vucetic, Sungsoo Ray Hong
+  </p>
 
-    <p class="authors">
-      Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
-    </p>
-
-    <div class="buttons-row">
-
-      <a class="custom-btn">ANCAT Code</a>
-      <a class="custom-btn">arXiv</a>
-      <a class="custom-btn">Slides</a>
-
-      <!-- DATASET -->
-      <div class="dataset-wrapper">
-        <a class="custom-btn dataset-btn" onclick="toggleDropdown()">Dataset</a>
-
-        <div id="datasetMenu" class="dataset-dropdown">
-          <a href="#">Dataset A</a>
-          <a href="#">Dataset B</a>
-          <a href="#">Dataset C</a>
-        </div>
-      </div>
-
-    </div>
+  <div class="buttons-row">
+    <a href="#" class="btn">ANCAT Code</a>
+    <a href="#" class="btn">arXiv</a>
+    <a href="#" class="btn">Slides</a>
+    <a href="#" class="btn dataset-btn">Dataset</a>
   </div>
 </section>
 
-<!-- VIDEO -->
+<!-- ===== VIDEO ===== -->
 <section class="section">
-  <div class="container">
-    <h2>Video Presentation</h2>
+  <h2>Video Presentation</h2>
 
-    <video controls class="video">
-      <source src="static/videos/demo.mp4" type="video/mp4">
+  <div class="video-container">
+    <video controls>
+      <source src="static/video/demo.mp4" type="video/mp4">
     </video>
   </div>
 </section>
 
-<!-- DATASET PREVIEW -->
+<!-- ===== BIBTEX ===== -->
 <section class="section">
-  <div class="container">
-    <h2>Dataset Preview</h2>
+  <h2>BibTeX</h2>
 
-    <div class="grid">
-      <img src="static/images/sample.jpg">
-      <img src="static/images/sample.jpg">
-      <img src="static/images/sample.jpg">
-      <img src="static/images/sample.jpg">
-    </div>
-  </div>
-</section>
+  <div class="bibtex-container">
+    <button class="copy-btn" onclick="copyBibtex()">Copy</button>
 
-<!-- BIBTEX -->
-<section class="section">
-  <div class="container">
-    <h2>BibTeX</h2>
-
-    <div class="bibtex">
-<pre>
-@inproceedings{feng2026,
-  title={Lost in Translation},
-  author={Feng, Huining},
-  booktitle={CHI 2026}
+<pre id="bibtex">
+@inproceedings{feng2026lost,
+  author = {Feng, Huining and Ara, Zinat and Hundt, Andrew and Chung, John Joon Young and Vucetic, Slobodan and Hong, Sungsoo Ray},
+  title = {Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
+  year = {2026},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  note = {To appear},
+  doi = {10.1145/3772318.3791853}
 }
 </pre>
-    </div>
+
   </div>
 </section>
 
-<!-- SCRIPT -->
-<script>
-function toggleDropdown() {
-  const menu = document.getElementById("datasetMenu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <p>
+    This page was built using the
+    <a href="https://github.com/nerfies/nerfies.github.io">
+      Academic Project Page Template
+    </a>
+    which was adopted from the Nerfies project page.
+    You are free to borrow the source code of this website, we just ask that
+    you link back to this page in the footer.
+  </p>
 
-window.onclick = function(e) {
-  if (!e.target.matches('.dataset-btn')) {
-    document.getElementById("datasetMenu").style.display = "none";
-  }
+  <p>
+    This website is licensed under a
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">
+      Creative Commons Attribution-ShareAlike 4.0 International License
+    </a>.
+  </p>
+</footer>
+
+<!-- ===== COPY SCRIPT ===== -->
+<script>
+function copyBibtex() {
+  const text = document.getElementById("bibtex").innerText;
+  navigator.clipboard.writeText(text);
+  alert("Copied!");
 }
 </script>
 
