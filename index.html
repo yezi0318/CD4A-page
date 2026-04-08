@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Lost in Translation</title>
-  <link rel="stylesheet" href="static/css/index.css">
+<meta charset="UTF-8">
+<title>Lost in Translation</title>
+
+<!-- ❗确保路径正确 -->
+<link rel="stylesheet" href="./static/css/index.css">
+
 </head>
 
 <body>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero">
-  <h1>
-    Lost in Translation: Understanding Autistic–Neurotypical
-    Communication Style Differences in Job Postings
+  <h1 class="title">
+    Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings
   </h1>
 
   <p class="authors">
@@ -20,31 +22,31 @@
     Slobodan Vucetic, Sungsoo Ray Hong
   </p>
 
-  <div class="buttons-row">
+  <div class="buttons">
     <a href="#" class="btn">ANCAT Code</a>
     <a href="#" class="btn">arXiv</a>
     <a href="#" class="btn">Slides</a>
-    <a href="#" class="btn dataset-btn">Dataset</a>
+    <a href="#" class="btn">Dataset</a>
   </div>
 </section>
 
-<!-- ===== VIDEO ===== -->
+<!-- VIDEO -->
 <section class="section">
   <h2>Video Presentation</h2>
 
-  <div class="video-container">
+  <div class="video-box">
     <video controls>
       <source src="static/video/demo.mp4" type="video/mp4">
     </video>
   </div>
 </section>
 
-<!-- ===== BIBTEX ===== -->
+<!-- BIBTEX -->
 <section class="section">
   <h2>BibTeX</h2>
 
-  <div class="bibtex-container">
-    <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+  <div class="bibtex">
+    <button onclick="copyBibtex()">Copy</button>
 
 <pre id="bibtex">
 @inproceedings{feng2026lost,
@@ -54,39 +56,23 @@
   year = {2026},
   publisher = {Association for Computing Machinery},
   address = {New York, NY, USA},
-  note = {To appear},
-  doi = {10.1145/3772318.3791853}
+  note = {To appear}
 }
 </pre>
 
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
+<!-- FOOTER -->
+<footer>
   <p>
-    This page was built using the
-    <a href="https://github.com/nerfies/nerfies.github.io">
-      Academic Project Page Template
-    </a>
-    which was adopted from the Nerfies project page.
-    You are free to borrow the source code of this website, we just ask that
-    you link back to this page in the footer.
-  </p>
-
-  <p>
-    This website is licensed under a
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">
-      Creative Commons Attribution-ShareAlike 4.0 International License
-    </a>.
+    This page was built using the Academic Project Page Template adapted from Nerfies.
   </p>
 </footer>
 
-<!-- ===== COPY SCRIPT ===== -->
 <script>
 function copyBibtex() {
-  const text = document.getElementById("bibtex").innerText;
-  navigator.clipboard.writeText(text);
+  navigator.clipboard.writeText(document.getElementById("bibtex").innerText);
   alert("Copied!");
 }
 </script>
