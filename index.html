@@ -55,11 +55,19 @@ body {
   text-align: center;
 }
 
+/* ===== CARD STYLE（🔥新加） ===== */
+.card-box {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
 /* ===== ABSTRACT ===== */
 .abstract {
-  max-width: 900px;
-  margin: auto;
-  text-align: left;
   line-height: 1.7;
   font-size: 16px;
 }
@@ -135,16 +143,8 @@ footer {
 <!-- ABSTRACT -->
 <section class="section">
   <h2>Abstract</h2>
-  <div class="abstract">
-    Autistic adults often use different communication styles than neurotypical individuals (NTs). While prior research has documented how such gaps disadvantage autistic job seekers, no study has systematically examined when these differences arise in language use and why autistic adults encounter interpretive gaps. This work seeks to datafy and characterize these communication challenges.
-
-    <br><br>
-
-    We built an annotation interface and recruited 20 autistic adults to analyze 10 job postings each that they had selected as cases where they felt “lost in translation.” Participants annotated text spans using six categories informed by speech and language literature: unclear, ambiguous, incomplete, inappropriate, negative, and other.
-
-    <br><br>
-
-    Follow-up interviews showed that lexical difficulties were rarely barriers; rather, challenges stemmed from interpreting implicit social arrangements or unstated expectations. We release the anonymized annotation data as the first-of-its-kind dataset documenting autistic–NT communication style differences. We conclude with implications for designing supports that foster clearer autistic–NT communication.
+  <div class="card-box abstract">
+    Autistic adults often use different communication styles than neurotypical individuals (NTs)...
   </div>
 </section>
 
@@ -161,9 +161,6 @@ footer {
       style="border-radius:10px;">
     </iframe>
 
-    <p style="color:#666; font-size:14px; margin-top:10px;">
-    </p>
-
   </div>
 </section>
 
@@ -171,28 +168,56 @@ footer {
 <section class="section">
   <h2>ANCAT System</h2>
 
-  <div class="abstract">
+  <div class="card-box abstract">
     ANCAT is a web-based annotation tool designed to identify communication gaps in job postings.
-    It supports the annotation of unclear, ambiguous, and socially embedded language in workplace contexts.
 
     <br><br>
 
-    The system enables participants to highlight text spans and categorize them into multiple communication gap types,
-    including unclear, ambiguous, incomplete, inappropriate, and negative.
+    The system enables participants to highlight text spans and categorize them into multiple communication gap types.
 
     <br><br>
 
-    ANCAT is provided as a research artifact and runs locally. Please refer to the GitHub repository for setup instructions.
-
-    <br><br>
-
-    <strong>Dataset:</strong> The dataset used in this study is available upon request due to privacy considerations.
+    <strong>How to Use:</strong>
+    Clone the repository, run <code>npm install</code>, then <code>npm run dev</code>.
 
     <br><br>
 
     <a class="btn" href="https://github.com/yezi0318/ANCAT" target="_blank">
       View ANCAT on GitHub
     </a>
+  </div>
+</section>
+
+<!-- DATASET -->
+<section class="section">
+  <h2>Dataset</h2>
+
+  <div class="card-box abstract">
+
+    This project includes four datasets capturing communication gaps in workplace contexts.
+
+    <br><br>
+
+    <strong>Annotation Dataset:</strong> 683 annotations across 200 job descriptions.
+
+    <br><br>
+
+    <strong>Interview Dataset:</strong> 720 qualitative quotes.
+
+    <br><br>
+
+    <strong>How to Use:</strong> Analyze communication patterns or train AI models.
+
+    <br><br>
+
+    <strong>Access:</strong> Available upon request.
+
+    <br><br>
+
+    <strong>Contact:</strong><br>
+    your_email@gmu.edu<br>
+    coauthor@gmu.edu
+
   </div>
 </section>
 
@@ -203,22 +228,12 @@ footer {
   <div class="bibtex">
     <button class="copy-btn" onclick="copyBibtex()">Copy</button>
 
-<pre id="bibtex-text">@inproceedings{feng2026lost,
-  author = {Feng, Huining and Ara, Zinat and Hundt, Andrew and Chung, John Joon Young and Vucetic, Slobodan and Hong, Sungsoo Ray},
-  title = {Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings},
-  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems},
-  year = {2026},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  note = {To appear}
-}</pre>
+<pre id="bibtex-text">@inproceedings{feng2026lost,...}</pre>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  This page was built using the Academic Project Page Template adapted from Nerfies.<br>
-  This website is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+  This page was built using the Academic Project Page Template adapted from Nerfies.
 </footer>
 
 <script>
