@@ -47,15 +47,20 @@ body {
   font-weight: bold;
 }
 
-/* ===== SECTION ===== */
+/* ===== SECTION（🔥间距修复） ===== */
 .section {
   background: #f4f4f4;
   color: black;
-  padding: 60px 20px;
+  padding: 80px 20px;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-/* ===== CARD STYLE（🔥新加） ===== */
+h2 {
+  margin-bottom: 30px;
+}
+
+/* ===== CARD（只给 ANCAT / Dataset 用） ===== */
 .card-box {
   max-width: 900px;
   margin: 40px auto;
@@ -66,8 +71,11 @@ body {
   text-align: left;
 }
 
-/* ===== ABSTRACT ===== */
+/* ===== ABSTRACT（无边框） ===== */
 .abstract {
+  max-width: 900px;
+  margin: auto;
+  text-align: left;
   line-height: 1.7;
   font-size: 16px;
 }
@@ -78,7 +86,7 @@ body {
   margin: auto;
 }
 
-/* ===== BIBTEX ===== */
+/* ===== BIBTEX（🔥修复截断） ===== */
 .bibtex {
   position: relative;
   max-width: 900px;
@@ -90,8 +98,8 @@ body {
 }
 
 .bibtex pre {
-  white-space: pre;
-  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
   font-family: monospace;
   font-size: 14px;
   margin: 0;
@@ -109,12 +117,13 @@ body {
   cursor: pointer;
 }
 
-/* ===== FOOTER ===== */
+/* ===== FOOTER（🔥修复） ===== */
 footer {
   background: #f4f4f4;
-  color: #666;
-  padding: 30px;
+  color: #888;
+  padding: 50px;
   text-align: center;
+  font-size: 14px;
 }
 </style>
 
@@ -132,19 +141,20 @@ footer {
     Huining Feng, Zinat Ara, Andrew Hundt, John Joon Young Chung, Slobodan Vucetic, Sungsoo Ray Hong
   </div>
 
-<div class="buttons">
-  <a class="btn" href="https://github.com/yezi0318/ANCAT" target="_blank">ANCAT Code</a>
-  <a class="btn" href="arxiv链接" target="_blank">arXiv</a>
-  <a class="btn" href="https://docs.google.com/presentation/d/1bxfl_DX3JiCIh7Zx-HlYAmK1DK5Tszi3/present" target="_blank">Slides</a>
-  <a class="btn" href="https://drive.google.com/drive/folders/1Xyng8lhhG5tjMRyvIn5frkzxWYdNA_ft?usp=drive_link" target="_blank">Dataset</a>
-</div>
+  <div class="buttons">
+    <a class="btn" href="https://github.com/yezi0318/ANCAT" target="_blank">ANCAT Code</a>
+    <a class="btn" href="#">arXiv</a>
+    <a class="btn" href="https://docs.google.com/presentation/d/1bxfl_DX3JiCIh7Zx-HlYAmK1DK5Tszi3/present" target="_blank">Slides</a>
+    <a class="btn" href="#">Dataset</a>
+  </div>
 </section>
 
-<!-- ABSTRACT -->
+<!-- ABSTRACT（🔥无卡片） -->
 <section class="section">
   <h2>Abstract</h2>
-  <div class="card-box abstract">
-    Autistic adults often use different communication styles than neurotypical individuals (NTs)...
+  <div class="abstract">
+    Autistic adults often use different communication styles than neurotypical individuals (NTs). 
+    This work characterizes communication gaps in job postings using an annotation system and qualitative analysis.
   </div>
 </section>
 
@@ -152,7 +162,6 @@ footer {
 <section class="section">
   <h2>Video Presentation</h2>
   <div class="video-box">
-
     <iframe 
       src="https://drive.google.com/file/d/1U1D93z-yENp76QU-1KWNjEVYrPZQRerS/preview" 
       width="100%" 
@@ -160,30 +169,24 @@ footer {
       allow="autoplay"
       style="border-radius:10px;">
     </iframe>
-
   </div>
 </section>
 
-<!-- ANCAT SYSTEM -->
+<!-- ANCAT -->
 <section class="section">
   <h2>ANCAT System</h2>
-
-  <div class="card-box abstract">
-    ANCAT is a web-based annotation tool designed to identify communication gaps in job postings.
-
-    <br><br>
-
-    The system enables participants to highlight text spans and categorize them into multiple communication gap types.
+  <div class="card-box">
+    ANCAT is a web-based annotation tool for identifying communication gaps in job postings.
 
     <br><br>
 
-    <strong>How to Use:</strong>
-    Clone the repository, run <code>npm install</code>, then <code>npm run dev</code>.
+    <strong>How to Use:</strong><br>
+    Clone the repository → <code>npm install</code> → <code>npm run dev</code>
 
     <br><br>
 
     <a class="btn" href="https://github.com/yezi0318/ANCAT" target="_blank">
-      View ANCAT on GitHub
+      View on GitHub
     </a>
   </div>
 </section>
@@ -191,22 +194,21 @@ footer {
 <!-- DATASET -->
 <section class="section">
   <h2>Dataset</h2>
-
-  <div class="card-box abstract">
+  <div class="card-box">
 
     This project includes four datasets capturing communication gaps in workplace contexts.
 
     <br><br>
 
-    <strong>Annotation Dataset:</strong> 683 annotations across 200 job descriptions.
+    • 200 job descriptions (anonymized)  
+    • 683 annotation entries  
+    • 720 interview quotes  
+    • Thematic analysis results  
 
     <br><br>
 
-    <strong>Interview Dataset:</strong> 720 qualitative quotes.
-
-    <br><br>
-
-    <strong>How to Use:</strong> Analyze communication patterns or train AI models.
+    <strong>How to Use:</strong><br>
+    Analyze communication patterns or build AI tools for inclusive communication.
 
     <br><br>
 
@@ -215,8 +217,8 @@ footer {
     <br><br>
 
     <strong>Contact:</strong><br>
-    your_email@gmu.edu<br>
-    coauthor@gmu.edu
+    hfeng2@gmu.edu<br>
+    shong31@gmu.edu
 
   </div>
 </section>
@@ -228,12 +230,22 @@ footer {
   <div class="bibtex">
     <button class="copy-btn" onclick="copyBibtex()">Copy</button>
 
-<pre id="bibtex-text">@inproceedings{feng2026lost,...}</pre>
+<pre id="bibtex-text">@inproceedings{feng2026lost,
+  author = {Feng, Huining and Ara, Zinat and Hundt, Andrew and Vucetic, Slobodan and Chung, John Joon Young and Hong, Sungsoo Ray},
+  title = {Lost in Translation: Understanding Autistic–Neurotypical Communication Style Differences in Job Postings},
+  booktitle = {Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26)},
+  year = {2026},
+  location = {Barcelona, Spain},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  doi = {10.1145/3772318.3791853}
+}</pre>
   </div>
 </section>
 
 <footer>
-  This page was built using the Academic Project Page Template adapted from Nerfies.
+  This page was built using the Academic Project Page Template, adopted from the Nerfies project page. Restyled to match the Alignment Lab website. 
+  This page is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
 </footer>
 
 <script>
